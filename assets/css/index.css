@@ -54,19 +54,18 @@ body {
 .page-links .nav-link ul li a {
     text-decoration: none;
 }
-.main-page{
+/* .main-page{
     background-image: url("../images/Banner.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-}
+} */
 /** Banner Section */
 .banner-section {
    
 }
 
-.banner-section .banner {
-    /* height: 500px; */
+/* .banner-section .banner {
     width: 1080px;
     margin: auto;
 }
@@ -76,8 +75,13 @@ body {
     align-items: center;
     justify-content: space-between;
     height: inherit;
+} */
+.banner-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit;
 }
-
 .banner-head h1 {
     font-size: 65px;
 }
@@ -125,3 +129,49 @@ body {
         /* End position at the top */
     }
 }
+
+/* Bootsrap*/
+.carousel-item{
+    height: 600px;
+ }
+ .carousel-item img{
+    height: auto;
+ }
+
+
+ .carousel-images{
+    background-image: url('../images/DSC03576.JPG');
+ }
+
+ .hover{
+    position: absolute;
+    width: calc(100% - 5.5%);
+    margin: auto;
+    bottom: 0;
+    z-index: 0;
+    opacity: 0;
+    padding: 10px;
+    background-color: #8DC23E;
+    color: #fff;
+ }
+
+ .card-section{
+    cursor: pointer;
+    position: relative;
+ }
+
+ .card-section:hover .hover{
+    z-index: 1;
+    opacity: 1;
+ }
+
+ /** Media Query */
+ @media only screen and (max-width: 1023px) {
+    .carousel-item{
+        height: auto;
+        margin-bottom: 25px;
+     }
+     .carousel-item img{
+        height: auto;
+     }
+  }

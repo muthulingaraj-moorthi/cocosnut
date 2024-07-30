@@ -13,6 +13,10 @@ body {
     color: #000;
 }
 
+a {
+    text-decoration: none;
+}
+
 .main-page {}
 
 .header {
@@ -54,6 +58,7 @@ body {
 .page-links .nav-link ul li a {
     text-decoration: none;
 }
+
 /* .main-page{
     background-image: url("../images/Banner.png");
     background-position: center;
@@ -61,9 +66,7 @@ body {
     background-size: 100% 100%;
 } */
 /** Banner Section */
-.banner-section {
-   
-}
+.banner-section {}
 
 /* .banner-section .banner {
     width: 1080px;
@@ -82,12 +85,22 @@ body {
     justify-content: space-between;
     height: inherit;
 }
+
 .banner-head h1 {
     font-size: 65px;
 }
 
 .banner-head h3 {
     font-size: 25px;
+}
+
+.carousel-images-slide {
+    width: 80%;
+    margin: auto;
+}
+
+.info-1 {
+    padding-top: 25px;
 }
 
 .banner-head h1,
@@ -106,11 +119,12 @@ body {
     }
 }
 
-.banner-wrapper{
+.banner-wrapper {
     text-align: right;
     padding: 50px 0px;
 }
-.banner-wrapper img{
+
+.banner-wrapper img {
     width: 90%;
     height: inherit;
 }
@@ -131,19 +145,21 @@ body {
 }
 
 /* Bootsrap*/
-.carousel-item{
-    height: 600px;
- }
- .carousel-item img{
+.carousel-item {
+    height: 700px;
+    background-color: #8DC23E;
+}
+
+.carousel-item img {
     height: auto;
- }
+}
 
 
- .carousel-images{
+.carousel-images {
     background-image: url('../images/DSC03576.JPG');
- }
+}
 
- .hover{
+.hover {
     position: absolute;
     width: calc(100% - 5.5%);
     margin: auto;
@@ -153,25 +169,333 @@ body {
     padding: 10px;
     background-color: #8DC23E;
     color: #fff;
- }
+}
 
- .card-section{
+.card-section {
     cursor: pointer;
     position: relative;
- }
+}
 
- .card-section:hover .hover{
+.card-section:hover .hover {
     z-index: 1;
     opacity: 1;
- }
+}
 
- /** Media Query */
- @media only screen and (max-width: 1023px) {
-    .carousel-item{
+/** Vedio Section **/
+.vedio-cake {
+    position: relative;
+}
+
+.cake-desserts-content {
+    width: 100%;
+    top: 0;
+    height: 100%;
+}
+
+.ckae-vd-con {
+    flex-grow: 5;
+    width: 50%;
+}
+
+.ckae-vd-con.cake-h1 {
+    width: 50%;
+    text-align: center;
+}
+
+.ckae-vd-con.cake-h1 h1 {
+    animation-name: cake-heading;
+    animation-duration: 4s;
+    color: #fff;
+    font-size: 40px;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+.ckae-vd-con.cake-content {
+    padding-right: 100px;
+    color: #fff;
+    font-size: 20px;
+}
+
+/** Slide Section **/
+.slide-wrapper {
+    height: 350px;
+    position: relative;
+}
+
+.slide-wrapper .slides {
+    height: 100%;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    border: 2px solid #8DC23E;
+    padding: 10px;
+
+}
+
+.review-sections .slider-logo {
+    width: 50px;
+    margin: 20px;
+    position: absolute;
+    margin-bottom: 55px;
+    z-index: 1;
+}
+
+.review-sections h2 {
+    margin-top: 15px;
+}
+
+.slide-section {
+    /* background-image: url(../images/COCOSNUT-LOGO.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px; */
+    position: relative;
+}
+
+.slide-btn-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-btn-section img {
+    width: 35px;
+    cursor: pointer;
+}
+
+.slide-btn-section .pre-btn {
+    transform: rotate(180deg);
+    margin-right: 25px;
+}
+
+.slide-btn-section .next-btn {
+    margin-left: 25px;
+}
+
+.slide-hide {
+    /* opacity: 0;
+    z-index: -1;
+    position: absolute;
+    transition: .5s ease;
+    left: 100%;
+    width: 0; */
+
+    /* position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #8DC23E;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    transition: .5s ease; */
+
+    display: none;
+
+}
+
+.slide-active {
+    /* opacity: 1;
+    z-index: 1;
+    position: absolute;
+    transition: .5s ease;
+    left: 0;
+    width: 100%;
+    transform: scale(1); */
+
+    display: flex;
+}
+
+/** Footer **/
+.footer-section {
+    margin-top: 20px;
+    padding: 25px 0px;
+
+}
+
+.footer-logo-section {
+    text-align: center;
+}
+
+.footer-logo-section img {
+    width: 25%;
+}
+
+.social-icon img {
+    width: 45px;
+    margin: 0px 15px;
+}
+
+.copy-rights {
+    background-color: #8DC23E;
+    color: #fff;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 10px;
+}
+
+/** Menu Popup **/
+.menu-pop-up {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.menu-popup-container {
+    text-align: center;
+    padding: 15px 0px;
+}
+
+
+.menu-popup-container img {
+    width: 33%;
+}
+
+.pop_down {
+    z-index: -10;
+    opacity: 0;
+}
+
+.pop_up {
+    z-index: 10;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.close-btn {
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    padding: 10px 15px;
+    background: #8DC23E;
+    color: white;
+    border: 1px solid #000;
+    border-radius: 25px;
+    right: 25px;
+    top: 25px;
+
+}
+
+/** Animations **/
+/** Cake H1 **/
+/* @keyframes cake-heading {
+    0%{
+        font-size: 40px;
+        opacity: 0;
+    }
+
+    50%{
+        font-size: 45px;
+        opacity: 0.3;
+    }
+
+    75%{
+        font-size: 50px;
+        opacity: 0.5;
+    }
+
+    100%{
+        color: #fff;
+        opacity: 1;
+    }
+
+} */
+
+/** Media Query */
+@media only screen and (max-width: 1023px) {
+    .carousel-item {
         height: auto;
         margin-bottom: 25px;
-     }
-     .carousel-item img{
+    }
+
+    .carousel-item img {
         height: auto;
-     }
-  }
+    }
+}
+
+/** Media Query */
+@media only screen and (max-width: 767px) {
+    .carousel-item {
+        height: auto;
+        margin-bottom: 25px;
+    }
+
+    .carousel-item img {
+        height: auto;
+    }
+
+    .info-1 {
+        padding-top: 15px;
+    }
+
+    .info-section h2 {
+        font-size: 20px;
+        padding-left: 15px;
+    }
+
+    .card-section {
+        margin-bottom: 15px;
+    }
+
+    .cake-desserts-content {
+        display: block !important;
+        top: 25%;
+    }
+
+    .ckae-vd-con.cake-h1 {
+        width: 100%;
+    }
+
+    .ckae-vd-con.cake-h1 h1 {
+        font-size: 20px;
+    }
+
+    .ckae-vd-con.cake-content {
+        padding: 0;
+        width: 100%;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .review-sections h2 {
+        font-size: 20px;
+    }
+
+    .review p,
+    .cus-name {
+        font-size: 10px;
+    }
+
+    .footer-logo-section {
+        margin-top: 20px;
+    }
+
+    .menu-popup-container img {
+        width: 75%;
+    }
+
+    .close-btn {
+        padding: 10px;
+        font-size: 10px;
+        top: 5px;
+        right: 5px;
+    }
+
+    .footer-logo-section p {
+        font-size: 15px;
+    }
+}
